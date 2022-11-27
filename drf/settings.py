@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'accounts.apps.AccountsConfig',
     'rest_framework',
+    'drf_spectacular',
+
 ]
 
 MIDDLEWARE = [
@@ -142,4 +144,12 @@ REST_FRAMEWORK = {
         'anon': '100/day',
         'user': '1000/day'
     },
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Your Project API',
+    'DESCRIPTION': 'Your project description',
+    'VERSION': '1.0.0',
 }
